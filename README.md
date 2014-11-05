@@ -1,4 +1,7 @@
 linux-settings
-==============
+# My Linux Settings
+These Linux / Bash / Vim settings and tricks make my life easier when developing
 
-Linux / Bash / Vim settings I often utilize
+### Auto-complete for Vim ([Neocomplete](https://github.com/Shougo/neocomplete.vim))
+PHP Example:
+![Neocomplete Example](screenshots/neocomplete.example.png)
