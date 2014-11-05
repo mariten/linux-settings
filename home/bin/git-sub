@@ -1,0 +1,9 @@
+#!/bin/sh
+OLD=$1
+NEW=$2
+MATCH_FILES=`grep -r $OLD * | cut -d':'  -f 1 | uniq`
+for FILE in $MATCH_FILES
+do
+    echo "replacing '$OLD' with '$NEW' in '$FILE'"
+    sed -i -e "s/$OLD/$NEW/g" $FILE
+done
