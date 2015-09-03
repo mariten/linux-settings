@@ -69,11 +69,12 @@ let java_highlight_all=1
 if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("java_highlight_java_lang") 
   " java.lang.*
   syn match javaLangClass "\<System\>"
-  syn keyword javaR_JavaLang NegativeArraySizeException ArrayStoreException IllegalStateException RuntimeException IndexOutOfBoundsException UnsupportedOperationException ArrayIndexOutOfBoundsException ArithmeticException ClassCastException EnumConstantNotPresentException StringIndexOutOfBoundsException IllegalArgumentException IllegalMonitorStateException IllegalThreadStateException NumberFormatException NullPointerException TypeNotPresentException SecurityException
+  syn keyword javaR_JavaLang NegativeArraySizeException ArrayStoreException IllegalStateException RuntimeException IndexOutOfBoundsException UnsupportedOperationException ArrayIndexOutOfBoundsException ArithmeticException ClassCastException EnumConstantNotPresentException StringIndexOutOfBoundsException IllegalArgumentException IllegalMonitorStateException IllegalThreadStateException NumberFormatException NullPointerException TypeNotPresentException SecurityException CloneNotSupportedException Exception NoSuchMethodException IllegalAccessException NoSuchFieldException Throwable InterruptedException ClassNotFoundException InstantiationException SQLException ServletException ExecutionException IOException InvalidClassException
+
   syn cluster javaTop add=javaR_JavaLang
   syn cluster javaClasses add=javaR_JavaLang
   JavaHiLink javaR_JavaLang javaR_Java
-  syn keyword javaC_JavaLang Process RuntimePermission StringKeySet CharacterData01 Class ThreadLocal ThreadLocalMap CharacterData0E Package Character StringCoding Long ProcessImpl ProcessEnvironment Short AssertionStatusDirectives 1PackageInfoProxy UnicodeBlock InheritableThreadLocal AbstractStringBuilder StringEnvironment ClassLoader ConditionalSpecialCasing CharacterDataPrivateUse StringBuffer StringDecoder Entry StringEntry WrappedHook StringBuilder StrictMath State ThreadGroup Runtime CharacterData02 MethodArray Object CharacterDataUndefined Integer Gate Boolean Enum Variable Subset StringEncoder Void Terminator CharsetSD IntegerCache CharacterCache Byte CharsetSE Thread SystemClassLoaderAction CharacterDataLatin1 StringValues StackTraceElement Shutdown ShortCache String ConverterSD ByteCache Lock EnclosingMethodInfo Math Float Value Double SecurityManager LongCache ProcessBuilder StringEntrySet Compiler Number UNIXProcess ConverterSE ExternalData CaseInsensitiveComparator CharacterData00 NativeLibrary List ArrayList LinkedList Map HashMap TreeMap Connection Statement PreparedStatement ResultSet ResultSetMetaData Driver DriverManager SQLException HttpServlet HttpServletRequest HttpServletRequestWrapper HttpServletResponse ServletException Callable Executors ExecutorService CompletionService ExecutorCompletionService ExecutionException PrintWriter IOException Enumeration Field Method File Arrays Future TimeUnit FileInputStream Properties ServletContext InputStream OutputStream ServletContextEvent ServletContextListener BufferedReader FileReader InputStreamReader OutputStreamReader URLEncoder Document DocumentBuilder DocumentBuilderFactory Node NodeList Element Iterator System
+  syn keyword javaC_JavaLang Process RuntimePermission StringKeySet CharacterData01 Class ThreadLocal ThreadLocalMap CharacterData0E Package Character StringCoding Long ProcessImpl ProcessEnvironment Short AssertionStatusDirectives 1PackageInfoProxy UnicodeBlock InheritableThreadLocal AbstractStringBuilder StringEnvironment ClassLoader ConditionalSpecialCasing CharacterDataPrivateUse StringBuffer StringDecoder Entry StringEntry WrappedHook StringBuilder StrictMath State ThreadGroup Runtime CharacterData02 MethodArray Object CharacterDataUndefined Integer BigInteger Gate Boolean Enum Variable Subset StringEncoder Void Terminator CharsetSD IntegerCache CharacterCache Byte CharsetSE Thread SystemClassLoaderAction CharacterDataLatin1 StringValues StackTraceElement Shutdown ShortCache String ConverterSD ByteCache Lock EnclosingMethodInfo Math Float Value Double DecimalFormat SecurityManager LongCache ProcessBuilder StringEntrySet Compiler Number UNIXProcess ConverterSE ExternalData CaseInsensitiveComparator CharacterData00 NativeLibrary Collections List ArrayList LinkedList Map HashMap LinkedHashMap TreeMap Set HashSet Connection Statement PreparedStatement ResultSet ResultSetMetaData Driver DriverManager Mongo MongoClient BasicDBObject BasicDBList CommandResult DBCursor DBCollection DBObject QueryOperators ArrayNode JsonNode JsonNodeFactory JsonParser ObjectMapper ObjectNode HttpServlet HttpServletRequest HttpServletRequestWrapper HttpServletResponse Callable Executors ExecutorService CompletionService ExecutorCompletionService PrintWriter Enumeration Field Method File Arrays Future Promise Optional TimeUnit Date DateFormat SimpleDateFormat LocalDate ZoneId Calendar FileInputStream Properties ServletContext InputStream OutputStream ServletContextEvent ServletContextListener BufferedReader FileReader InputStreamReader OutputStreamReader Logger Play Result URLEncoder Document DocumentBuilder DocumentBuilderFactory Json Node NodeList Element Iterator System Utils StringUtils ExceptionUtils Lists Maps Sets Collectors
   syn cluster javaTop add=javaC_JavaLang
   syn cluster javaClasses add=javaC_JavaLang
   JavaHiLink javaC_JavaLang javaC_Java
@@ -81,7 +82,6 @@ if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("ja
   syn cluster javaTop add=javaE_JavaLang
   syn cluster javaClasses add=javaE_JavaLang
   JavaHiLink javaE_JavaLang javaE_Java
-  syn keyword javaX_JavaLang CloneNotSupportedException Exception NoSuchMethodException IllegalAccessException NoSuchFieldException Throwable InterruptedException ClassNotFoundException InstantiationException
   syn cluster javaTop add=javaX_JavaLang
   syn cluster javaClasses add=javaX_JavaLang
   JavaHiLink javaX_JavaLang javaX_Java
@@ -90,9 +90,9 @@ if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("ja
   JavaHiLink javaC_Java javaC_
   JavaHiLink javaE_Java javaE_
   JavaHiLink javaX_Java javaX_
-  JavaHiLink javaX_		     javaExceptions
-  JavaHiLink javaR_		     javaExceptions
-  JavaHiLink javaE_		     javaExceptions
+  JavaHiLink javaX_		     javaType
+  JavaHiLink javaR_		     javaType
+  JavaHiLink javaE_		     javaType
   JavaHiLink javaC_		     javaType
 
   syn keyword javaLangObject clone equals finalize getClass hashCode
@@ -293,7 +293,7 @@ if version >= 508 || !exists("did_java_syn_inits")
   JavaHiLink javaUserLabel		Label
   JavaHiLink javaConditional		Conditional
   JavaHiLink javaRepeat			Repeat
-  JavaHiLink javaExceptions		Identifier
+  JavaHiLink javaExceptions		Statement
   JavaHiLink javaAssert			Statement
   JavaHiLink javaStorageClass		StorageClass
   JavaHiLink javaMethodDecl		javaStorageClass
