@@ -335,7 +335,7 @@ if version >= 508 || !exists("did_python_syn_inits")
     HiLink pythonBuiltin	Function
   endif
   if !exists("python_no_exception_highlight")
-    HiLink pythonExceptions	Structure
+    HiLink pythonExceptions	Identifier
   endif
   if exists("python_space_error_highlight")
     HiLink pythonSpaceError	Error
