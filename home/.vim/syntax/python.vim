@@ -67,7 +67,7 @@ endif
 "   built-in below (use 'from __future__ import print_function' in 2.6)
 "
 syn keyword pythonStatement	False, None, True
-syn keyword pythonStatement	as assert break continue del exec global
+syn keyword pythonStatement	as assert break continue del exec exit global
 syn keyword pythonStatement	lambda nonlocal pass print return with yield
 syn keyword pythonStatement	class def nextgroup=pythonFunction skipwhite
 syn keyword pythonConditional	elif else if
@@ -196,7 +196,7 @@ syn keyword pythonLibrary	textwrap codecs unicodedata stringprep fpformat
 
 syn keyword pythonLibrary	datetime calendar collections heapq bisect array
 syn keyword pythonLibrary	sets sched mutex Queue weakref UserDict UserList
-syn keyword pythonLibrary	UserString types new copy pprint repr
+syn keyword pythonLibrary	UserString types new copy pprint repr requests
 
 syn keyword pythonLibrary	numbers math cmath decimal fractions random
 syn keyword pythonLibrary	itertools functools operator
@@ -226,7 +226,7 @@ syn keyword pythonLibrary	MimeWriter mimify multifile rfc822 base64 binhex binas
 
 syn keyword pythonLibrary	HTMLParser sgmllib htmllib htmlentitydefs xml
 
-syn keyword pythonLibrary	webbrowser cgi cgitb wsgiref urllib urllib2 httplib ftplib
+syn keyword pythonLibrary	webbrowser cgi cgitb wsgiref urllib urllib2 urllib3 httplib ftplib
 syn keyword pythonLibrary	poplib imaplib nntplib smtplib smtpd telnetlib uuid
 syn keyword pythonLibrary	urlparse SocketServer BaseHTTPServer SimpleHTTPServer
 syn keyword pythonLibrary	CGIHTTPServer cookielib Cookie xmlrpclib SimpleXMLRPCServer DocXMLRPCServer

@@ -151,7 +151,7 @@ syn keyword phpFunctions  ctype_alnum ctype_alpha ctype_cntrl ctype_digit ctype_
 syn keyword phpFunctions  curl_close curl_errno curl_error curl_exec curl_getinfo curl_init curl_multi_add_handle curl_multi_close curl_multi_exec curl_multi_getcontent curl_multi_info_read curl_multi_init curl_multi_remove_handle curl_multi_select curl_setopt curl_version contained
 syn keyword phpFunctions  cybercash_base64_decode cybercash_base64_encode cybercash_decr cybercash_encr contained
 syn keyword phpFunctions  cyrus_authenticate cyrus_bind cyrus_close cyrus_connect cyrus_query cyrus_unbind  contained
-syn keyword phpFunctions  checkdate date getdate gettimeofday gmdate gmmktime gmstrftime localtime microtime mktime strftime strtotime time contained
+syn keyword phpFunctions  checkdate date date_default_timezone_set date_default_timezone_get getdate gettimeofday gmdate gmmktime gmstrftime localtime microtime mktime strftime strtotime time contained
 syn keyword phpFunctions  dba_close dba_delete dba_exists dba_fetch dba_firstkey dba_handlers dba_insert dba_key_split dba_list dba_nextkey dba_open dba_optimize dba_popen dba_replace dba_sync  contained
 syn keyword phpFunctions  dbase_add_record dbase_close dbase_create dbase_delete_record dbase_get_header_info dbase_get_record_with_names dbase_get_record dbase_numfields dbase_numrecords dbase_open dbase_pack dbase_replace_record  contained
 syn keyword phpFunctions  dblist dbmclose dbmdelete dbmexists dbmfetch dbmfirstkey dbminsert dbmnextkey dbmopen dbmreplace  contained

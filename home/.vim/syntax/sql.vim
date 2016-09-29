@@ -28,9 +28,9 @@ syn keyword sqlKeyword	unique validate values view when whenever
 syn keyword sqlKeyword	where with option order limit pctfree privileges procedure
 syn keyword sqlKeyword	public resource return row rowlabel rownum rows
 syn keyword sqlKeyword	session share size smallint type using
-syn keyword sqlKeyword	full inner outer join left right interval partition unbounded preceding
+syn keyword sqlKeyword	full inner outer cross join left right interval partition unbounded preceding
 
-syn keyword sqlOperator	not and or
+syn keyword sqlOperator	not and or xor
 syn keyword sqlOperator	in any some all between exists
 syn keyword sqlOperator	like escape
 syn keyword sqlOperator union intersect minus
@@ -38,11 +38,12 @@ syn keyword sqlOperator prior distinct
 syn keyword sqlOperator	sysdate out
 
 syn keyword sqlFunction count nvl abs avg sum round to_char convert_timezone coalesce datediff date_trunc
-syn keyword sqlFunction nullif ifnull min max upper lower first_value over
+syn keyword sqlFunction nullif ifnull min max upper lower first_value over greatest least
+syn keyword sqlFunction concat substring cast
 
 syn keyword sqlStatement alter analyze audit comment commit create
 syn keyword sqlStatement delete drop execute explain grant insert lock noaudit
-syn keyword sqlStatement rename revoke rollback savepoint select set
+syn keyword sqlStatement rename revoke rollback savepoint select set vacuum
 syn keyword sqlStatement truncate update
 
 syn keyword sqlType	boolean char character date float double precision integer long timestamp
