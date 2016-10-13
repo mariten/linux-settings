@@ -1,0 +1,2 @@
+#!/bin/sh
+git repack -a -d --depth=250 --window=250 -f
