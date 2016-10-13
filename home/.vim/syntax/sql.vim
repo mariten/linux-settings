@@ -37,7 +37,7 @@ syn keyword sqlOperator union intersect minus
 syn keyword sqlOperator prior distinct
 syn keyword sqlOperator	sysdate out
 
-syn keyword sqlFunction count nvl abs avg sum round to_char convert_timezone coalesce datediff date_trunc
+syn keyword sqlFunction count nvl abs avg sum round to_char convert_timezone coalesce datediff date_trunc to_date
 syn keyword sqlFunction nullif ifnull min max upper lower first_value over greatest least
 syn keyword sqlFunction concat substring cast
 
@@ -46,7 +46,7 @@ syn keyword sqlStatement delete drop execute explain grant insert lock noaudit
 syn keyword sqlStatement rename revoke rollback savepoint select set vacuum
 syn keyword sqlStatement truncate update
 
-syn keyword sqlType	boolean char character date float double precision integer long timestamp
+syn keyword sqlType	boolean char character date float double precision integer long timestamp timestamp_ntz dateadd
 syn keyword sqlType	mlslabel number raw rowid varchar varchar2 varray
 
 " Strings and characters:
