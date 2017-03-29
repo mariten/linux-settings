@@ -29,7 +29,7 @@ highlight Type           ctermfg=Cyan                                      cterm
 highlight Function       ctermfg=White
 highlight PreProc        ctermfg=Cyan
 highlight Operator       ctermfg=White
-highlight Constant       ctermfg=DarkRed
+highlight Constant       ctermfg=DarkRed                                   cterm=bold
 highlight Number         ctermfg=LightBlue
 highlight Float          ctermfg=LightBlue
 highlight Boolean        ctermfg=LightBlue

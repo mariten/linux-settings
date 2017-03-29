@@ -29,6 +29,7 @@ syn keyword sqlKeyword	where with option order limit pctfree privileges procedur
 syn keyword sqlKeyword	public resource return row rowlabel rownum rows
 syn keyword sqlKeyword	session share size smallint type using
 syn keyword sqlKeyword	full inner outer cross join left right interval partition unbounded preceding
+syn keyword sqlKeyword	sortkey distkey encode
 
 syn keyword sqlOperator	not and or xor
 syn keyword sqlOperator	in any some all between exists
@@ -37,8 +38,8 @@ syn keyword sqlOperator union intersect minus
 syn keyword sqlOperator prior distinct
 syn keyword sqlOperator	sysdate out
 
-syn keyword sqlFunction count nvl abs avg sum round to_char convert_timezone coalesce datediff date_trunc to_date
-syn keyword sqlFunction nullif ifnull min max upper lower first_value over greatest least
+syn keyword sqlFunction count nvl abs avg sum round to_char convert_timezone coalesce datediff date_trunc to_date date_part
+syn keyword sqlFunction nullif ifnull min max upper lower first_value over greatest least replace
 syn keyword sqlFunction concat substring cast
 
 syn keyword sqlStatement alter analyze audit comment commit create
@@ -46,8 +47,8 @@ syn keyword sqlStatement delete drop execute explain grant insert lock noaudit
 syn keyword sqlStatement rename revoke rollback savepoint select set vacuum
 syn keyword sqlStatement truncate update
 
-syn keyword sqlType	boolean char character date float double precision integer long timestamp timestamp_ntz dateadd
-syn keyword sqlType	mlslabel number raw rowid varchar varchar2 varray
+syn keyword sqlType	boolean char character date float double precision integer long timestamp timestamptz timestamp_ntz dateadd
+syn keyword sqlType	mlslabel number raw rowid varchar varchar2 varray bigint text
 
 " Strings and characters:
 syn region sqlString		start=+"+  skip=+\\\\\|\\"+  end=+"+

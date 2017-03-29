@@ -916,9 +916,6 @@ au BufNewFile,BufRead *.jj,*.jjt		setf javacc
 " JavaScript, ECMAScript
 au BufNewFile,BufRead *.js,*.javascript,*.es,*.jsx	setf javascript
 
-" JSON documents
-au BufNewFile,BufRead *.json			setf json
-
 " Java Server Pages
 au BufNewFile,BufRead *.jsp			setf jsp
 
@@ -1058,7 +1055,13 @@ au BufNewFile,BufRead *.mv,*.mpl,*.mws		setf maple
 au BufNewFile,BufRead *.map			setf map
 
 " Markdown
-au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md  setf markdown
+au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.md,*.mkdn,README.md  setf markdown
+
+" JSON
+au BufNewFile,BufRead *.json  setf json
+
+" GoLang
+au BufNewFile,BufRead *.go  setf go
 
 " Mason
 au BufNewFile,BufRead *.mason,*.mhtml		setf mason
@@ -1145,7 +1148,7 @@ au BufNewFile,BufRead *.mod
 	\ endif
 
 " Modula 2
-au BufNewFile,BufRead *.m2,*.DEF,*.MOD,*.md,*.mi setf modula2
+au BufNewFile,BufRead *.m2,*.DEF,*.MOD,*.mi setf modula2
 
 " Modula 3 (.m3, .i3, .mg, .ig)
 au BufNewFile,BufRead *.[mi][3g]		setf modula3
