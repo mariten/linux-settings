@@ -1,6 +1,6 @@
 " Vim color file
-" Maintainer:	Jeff Case
-" Last Change:	Sep 21 2011
+" Maintainer:   Jeff Case
+" Last Change:  Apr 23 2017
 " grey on black
 " optimized for TFT panels
 
@@ -19,7 +19,7 @@ let g:colors_name = "jeff"
 highlight Normal         ctermfg=Grey             ctermbg=Black
 highlight Cursor         ctermfg=Black            ctermbg=Green            cterm=bold
 highlight StatusLine     ctermfg=Blue             ctermbg=White
-highlight Visual         ctermfg=Green            ctermbg=Black
+highlight Visual         ctermfg=White            ctermbg=DarkGreen
 highlight Search         ctermfg=Black            ctermbg=Yellow            cterm=NONE
 highlight LineNr         ctermfg=Black            ctermbg=White
 
@@ -36,4 +36,7 @@ highlight Boolean        ctermfg=LightBlue
 highlight Comment        ctermfg=DarkGreen
 highlight Special        ctermfg=Brown
 
-" only for vim 
+highlight DiffChange     ctermbg=Magenta        ctermfg=Yellow
+highlight DiffText       ctermbg=Blue           ctermfg=White
+
+" only for vim
